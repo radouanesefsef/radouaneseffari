@@ -1,0 +1,933 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Radouane Seffari - WordPress Developer specializing in performance-driven websites. 20+ projects delivered with 95+ PageSpeed scores.">
+    <meta name="keywords"
+        content="WordPress Developer, Elementor Expert, WooCommerce, Web Development, Performance Optimization">
+    <meta name="author" content="Radouane Seffari">
+    <meta property="og:title" content="Radouane Seffari | WordPress Developer">
+    <meta property="og:description"
+        content="I Build WordPress Websites That Convert. Specializing in Elementor, WooCommerce, and Performance Optimization.">
+    <meta property="og:type" content="website">
+    <title>Radouane Seffari | WordPress Developer</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/sections.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/modals.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/modals.css">
+    <link rel="stylesheet" href="css/enhancements.css">
+    <link rel="stylesheet" href="css/rtl.css">
+</head>
+
+<body>
+    <!-- Preloader -->
+    <div class="preloader" id="preloader">
+        <div class="preloader-content">
+            <div class="loader"></div>
+            <p class="preloader-text">Loading Excellence...</p>
+        </div>
+    </div>
+
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+    <!-- Custom Cursor -->
+    <div class="cursor" id="cursor"></div>
+    <div class="cursor-follower" id="cursorFollower"></div>
+
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="#" class="logo">
+                    <span class="logo-text">RS</span>
+                    <span class="logo-dot">.</span>
+                </a>
+
+                <!-- Desktop Navigation -->
+                <nav class="nav desktop-nav" id="desktopNav">
+                    <ul class="nav-list">
+                        <div class="nav-active-indicator"></div>
+                        <li><a href="#home" class="nav-link" data-translate="nav_home">Home</a></li>
+                        <li><a href="#services" class="nav-link" data-translate="nav_services">Services</a></li>
+                        <li><a href="#projects" class="nav-link" data-translate="nav_projects">Projects</a></li>
+                        <li><a href="#about" class="nav-link" data-translate="nav_about">About</a></li>
+                        <li><a href="https://wa.me/213555346497" class="nav-link" data-translate="nav_contact"
+                                target="_blank">Contact</a></li>
+                    </ul>
+                </nav>
+
+                <div class="header-actions">
+                    <!-- Desktop Language Switcher -->
+                    <div class="lang-switcher desktop-only">
+                        <button class="lang-btn active" data-lang="en">EN</button>
+                        <button class="lang-btn" data-lang="fr">FR</button>
+                        <button class="lang-btn" data-lang="ar">AR</button>
+                    </div>
+
+                    <!-- Mobile Menu Toggle -->
+                    <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+                        <div class="hamburger">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Language Switcher (Outside overlay to remain clickable) -->
+    <div class="mobile-lang-switcher">
+        <button class="lang-btn active" data-lang="en">EN</button>
+        <button class="lang-btn" data-lang="fr">FR</button>
+        <button class="lang-btn" data-lang="ar">AR</button>
+    </div>
+
+    <!-- Mobile Navigation Overlay -->
+    <div class="mobile-nav-overlay" id="mobileNavOverlay">
+        <div class="mobile-nav-content">
+            <nav class="mobile-nav">
+                <ul class="mobile-nav-list">
+                    <li><a href="#home" class="mobile-nav-link" data-translate="nav_home">Home</a></li>
+                    <li><a href="#services" class="mobile-nav-link" data-translate="nav_services">Services</a></li>
+                    <li><a href="#projects" class="mobile-nav-link" data-translate="nav_projects">Projects</a></li>
+                    <li><a href="#about" class="mobile-nav-link" data-translate="nav_about">About</a></li>
+                    <li><a href="https://wa.me/213555346497" class="mobile-nav-link" data-translate="nav_contact"
+                            target="_blank">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="mobile-socials">
+                <!-- Optional: Add social icons or contact info if needed -->
+            </div>
+        </div>
+        <div class="mobile-nav-backdrop"></div>
+    </div>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="hero" id="home">
+            <div class="hero-background">
+                <div class="gradient-orb orb-1"></div>
+                <div class="gradient-orb orb-2"></div>
+                <div class="gradient-orb orb-3"></div>
+            </div>
+
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <h1 class="hero-title" data-translate="hero_title">
+                            I Build WordPress Websites That Convert.
+                        </h1>
+                        <p class="hero-subtitle" data-translate="hero_subtitle">
+                            I'm Radouane Seffari, a 24-year-old WordPress Developer specializing in performance-driven
+                            websites that help businesses grow.
+                        </p>
+
+                        <div class="typing-container">
+                            <span class="typing-prefix" data-translate="hero_typing_prefix">I'm a</span>
+                            <span class="typing-text" id="typingText"></span>
+                            <span class="typing-cursor">|</span>
+                        </div>
+
+                        <div class="hero-cta">
+                            <a href="#projects" class="btn btn-primary" data-translate="hero_cta_work">
+                                <span>View My Work</span>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                                    <polyline points="12 5 19 12 12 19"></polyline>
+                                </svg>
+                            </a>
+                            <a href="#contact" class="btn btn-secondary" data-translate="hero_cta_project">
+                                <span>Start a Project</span>
+                            </a>
+
+                            <!-- Response Time Badge -->
+                            <div class="response-badge">
+                                <span class="pulse-dot"></span>
+                                <span data-translate="hero_response_time">⚡ Response time: Within 24 hours</span>
+                            </div>
+                        </div>
+
+                        <!-- Floating Tech Badges -->
+                        <div class="tech-badges">
+                            <span class="badge">WordPress</span>
+                            <span class="badge">Elementor</span>
+                            <span class="badge">PHP</span>
+                            <span class="badge">JavaScript</span>
+                            <span class="badge">WooCommerce</span>
+                        </div>
+                    </div>
+
+                    <div class="hero-image">
+                        <div class="image-wrapper">
+                            <img src="image/unnamed.jpg" alt="Radouane Seffari - WordPress Developer" loading="eager">
+                            <div class="image-glow"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Trust Section -->
+        <section class="trust-section">
+            <div class="container">
+                <div class="trust-stats">
+                    <div class="stat-item">
+                        <div class="stat-number" data-count="20">0</div>
+                        <div class="stat-label" data-translate="trust_projects">Projects Delivered</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" data-count="95">0</div>
+                        <div class="stat-label" data-translate="trust_pagespeed">PageSpeed Scores</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" data-count="100">0</div>
+                        <div class="stat-label" data-translate="trust_satisfaction">Client Satisfaction</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section class="services-section" id="services">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title" data-translate="services_title">What I Do</h2>
+                    <p class="section-subtitle" data-translate="services_subtitle">
+                        Comprehensive WordPress solutions tailored to your business needs
+                    </p>
+                </div>
+
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <polyline points="16 18 22 12 16 6"></polyline>
+                                <polyline points="8 6 2 12 8 18"></polyline>
+                            </svg>
+                        </div>
+                        <h3 class="service-title" data-translate="service_1_title">Custom WordPress Development</h3>
+                        <p class="service-description" data-translate="service_1_desc">
+                            Tailored WordPress solutions built from the ground up to match your unique business
+                            requirements and brand identity.
+                        </p>
+                        <a href="#contact" class="service-link" data-translate="service_learn_more">Learn More →</a>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                                <line x1="8" y1="21" x2="16" y2="21"></line>
+                                <line x1="12" y1="17" x2="12" y2="21"></line>
+                            </svg>
+                        </div>
+                        <h3 class="service-title" data-translate="service_2_title">Elementor Pro Design</h3>
+                        <p class="service-description" data-translate="service_2_desc">
+                            Stunning, conversion-focused designs using Elementor Pro that captivate visitors and drive
+                            results.
+                        </p>
+                        <a href="#contact" class="service-link" data-translate="service_learn_more">Learn More →</a>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <circle cx="9" cy="21" r="1"></circle>
+                                <circle cx="20" cy="21" r="1"></circle>
+                                <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                            </svg>
+                        </div>
+                        <h3 class="service-title" data-translate="service_3_title">WooCommerce Stores</h3>
+                        <p class="service-description" data-translate="service_3_desc">
+                            Complete e-commerce solutions with seamless checkout experiences and optimized product
+                            pages.
+                        </p>
+                        <a href="#contact" class="service-link" data-translate="service_learn_more">Learn More →</a>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M21.21 15.89A10 10 0 1 1 8 2.83"></path>
+                                <path d="M22 12A10 10 0 0 0 12 2v10z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="service-title" data-translate="service_4_title">Website Redesign</h3>
+                        <p class="service-description" data-translate="service_4_desc">
+                            Transform your outdated website into a modern, high-performing digital asset that stands
+                            out.
+                        </p>
+                        <a href="#contact" class="service-link" data-translate="service_learn_more">Learn More →</a>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+                            </svg>
+                        </div>
+                        <h3 class="service-title" data-translate="service_5_title">Speed Optimization</h3>
+                        <p class="service-description" data-translate="service_5_desc">
+                            Achieve lightning-fast load times with expert optimization techniques that boost SEO and
+                            conversions.
+                        </p>
+                        <a href="#contact" class="service-link" data-translate="service_learn_more">Learn More →</a>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                                <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                            </svg>
+                        </div>
+                        <h3 class="service-title" data-translate="service_6_title">Maintenance & Security</h3>
+                        <p class="service-description" data-translate="service_6_desc">
+                            Keep your website secure, updated, and running smoothly with ongoing maintenance and
+                            support.
+                        </p>
+                        <a href="#contact" class="service-link" data-translate="service_learn_more">Learn More →</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section class="projects-section" id="projects">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title" data-translate="projects_title">Featured Projects</h2>
+                    <p class="section-subtitle" data-translate="projects_subtitle">
+                        A showcase of my recent work and successful client collaborations
+                    </p>
+                </div>
+
+
+
+                <div class="projects-grid" id="projectsGrid">
+                    <!-- 1. Networks & More Store -->
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="image/networksandmore.png" alt="Networks & More Store" loading="lazy" />
+                            <div class="project-overlay">
+                                <a href="https://networksandmore.com.sa/store/?lang=ar" target="_blank"
+                                    rel="noopener noreferrer" class="btn btn-visit">
+                                    Visit Site
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title" data-translate="proj_1_title">Networks & More Store</h3>
+                            <p class="project-description" data-translate="proj_1_desc">A comprehensive Arabic
+                                e-commerce platform for networking equipment. Features advanced filtering, dual-language
+                                support, and seamless payment integration.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">WordPress</span>
+                                <span class="tech-tag">WooCommerce</span>
+                                <span class="tech-tag">RTL Support</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 2. Spectra Baby -->
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="image/spectre baby.png" alt="Spectra Baby" loading="lazy" />
+                            <div class="project-overlay">
+                                <a href="https://spectrababy.sa/" target="_blank" rel="noopener noreferrer"
+                                    class="btn btn-visit">
+                                    Visit Site
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title" data-translate="proj_2_title">Spectra Baby</h3>
+                            <p class="project-description" data-translate="proj_2_desc">Official distributor website for
+                                Spectra Baby products. Built with a focus on trust, cleanliness, and user experience for
+                                new mothers.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">WordPress</span>
+                                <span class="tech-tag">Elementor</span>
+                                <span class="tech-tag">Brand Identity</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 3. Dadem Phone -->
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="image/dademphone.png" alt="Dadem Phone" loading="lazy" />
+                            <div class="project-overlay">
+                                <a href="https://dademphone.com/" target="_blank" rel="noopener noreferrer"
+                                    class="btn btn-visit">
+                                    Visit Site
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title" data-translate="proj_3_title">Dadem Phone</h3>
+                            <p class="project-description" data-translate="proj_3_desc">High-performance electronics
+                                e-commerce store. Optimized for speed and handling large product inventories with
+                                dynamic search.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">WooCommerce</span>
+                                <span class="tech-tag">Speed Optimization</span>
+                                <span class="tech-tag">Mobile First</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 4. Upass Academy -->
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="image/upassacademy.png" alt="Upass Academy" loading="lazy" />
+                            <div class="project-overlay">
+                                <a href="https://upass.academy/" target="_blank" rel="noopener noreferrer"
+                                    class="btn btn-visit">
+                                    Visit Site
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title" data-translate="proj_4_title">Upass Academy</h3>
+                            <p class="project-description" data-translate="proj_4_desc">Educational platform offering
+                                courses and resources. Features include LMS integration, student progress tracking, and
+                                secure video hosting.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">WordPress</span>
+                                <span class="tech-tag">LMS</span>
+                                <span class="tech-tag">Membership</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 5. Pas Ninja Shop -->
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="image/pasninjashop.png" alt="Pas Ninja Shop" loading="lazy" />
+                            <div class="project-overlay">
+                                <a href="https://pasninjashop.com/" target="_blank" rel="noopener noreferrer"
+                                    class="btn btn-visit">
+                                    Visit Site
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title" data-translate="proj_5_title">Pas Ninja Shop</h3>
+                            <p class="project-description" data-translate="proj_5_desc">Modern online shop with a unique
+                                aesthetic. Custom checkout flow and integrated social proof elements to boost
+                                conversions.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">WooCommerce</span>
+                                <span class="tech-tag">Custom Theme</span>
+                                <span class="tech-tag">Conversion Rate</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 6. GNG Style -->
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="image/a53da627-ec2a-41b5-89c4-a6bdf8003d65.png" alt="GNG Style" loading="lazy" />
+                            <div class="project-overlay">
+                                <a href="https://gng.style/" target="_blank" rel="noopener noreferrer"
+                                    class="btn btn-visit">
+                                    Visit Site
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title" data-translate="proj_6_title">GNG Style</h3>
+                            <p class="project-description" data-translate="proj_6_desc">A modern fashion & lifestyle brand website built for style and performance. Features a sleek design, seamless browsing experience, and optimized for conversions.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">WordPress</span>
+                                <span class="tech-tag">Elementor</span>
+                                <span class="tech-tag">Fashion & Style</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="about-section" id="about">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title" data-translate="about_title">About Me</h2>
+                    <p class="section-subtitle" data-translate="about_subtitle">
+                        Passionate developer focused on creating exceptional web experiences
+                    </p>
+                </div>
+
+                <div class="about-content">
+                    <div class="about-text">
+                        <p class="about-intro" data-translate="about_intro">
+                            At 24, I've turned my early passion for web development into a thriving career. I started
+                            building websites as a teenager, and what began as curiosity evolved into expertise in
+                            WordPress development.
+                        </p>
+                        <p class="about-description" data-translate="about_description">
+                            I don't just build websites—I create digital experiences that drive real business results.
+                            My focus is on clean code, exceptional performance, and designs that convert visitors into
+                            customers. Every project is an opportunity to push boundaries and deliver excellence.
+                        </p>
+
+                        <div class="skills-section">
+                            <h3 class="skills-title" data-translate="skills_title">Technical Skills</h3>
+                            <div class="skills-list">
+                                <div class="skill-item">
+                                    <div class="skill-header">
+                                        <span class="skill-name">WordPress Development</span>
+                                        <span class="skill-percentage">95%</span>
+                                    </div>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" style="width: 95%"></div>
+                                    </div>
+                                </div>
+                                <div class="skill-item">
+                                    <div class="skill-header">
+                                        <span class="skill-name">Elementor Pro</span>
+                                        <span class="skill-percentage">98%</span>
+                                    </div>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" style="width: 98%"></div>
+                                    </div>
+                                </div>
+                                <div class="skill-item">
+                                    <div class="skill-header">
+                                        <span class="skill-name">WooCommerce</span>
+                                        <span class="skill-percentage">90%</span>
+                                    </div>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" style="width: 90%"></div>
+                                    </div>
+                                </div>
+                                <div class="skill-item">
+                                    <div class="skill-header">
+                                        <span class="skill-name">Performance Optimization</span>
+                                        <span class="skill-percentage">92%</span>
+                                    </div>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" style="width: 92%"></div>
+                                    </div>
+                                </div>
+                                <div class="skill-item">
+                                    <div class="skill-header">
+                                        <span class="skill-name">PHP & JavaScript</span>
+                                        <span class="skill-percentage">88%</span>
+                                    </div>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" style="width: 88%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="experience-timeline">
+                        <h3 class="timeline-title" data-translate="experience_title">Experience Journey</h3>
+                        <div class="timeline">
+                            <div class="timeline-item">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-content">
+                                    <span class="timeline-year">2024 - Present</span>
+                                    <h4 class="timeline-heading" data-translate="exp_1_title">Senior WordPress Developer
+                                    </h4>
+                                    <p class="timeline-text" data-translate="exp_1_desc">Leading complex WordPress
+                                        projects with focus on performance and scalability</p>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-content">
+                                    <span class="timeline-year">2022 - 2024</span>
+                                    <h4 class="timeline-heading" data-translate="exp_2_title">WordPress Developer</h4>
+                                    <p class="timeline-text" data-translate="exp_2_desc">Specialized in Elementor and
+                                        WooCommerce development for diverse clients</p>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-content">
+                                    <span class="timeline-year">2020 - 2022</span>
+                                    <h4 class="timeline-heading" data-translate="exp_3_title">Junior Web Developer</h4>
+                                    <p class="timeline-text" data-translate="exp_3_desc">Started professional journey
+                                        building custom WordPress themes and plugins</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section class="testimonials-section">
+            <div class="container">
+                <div class="testimonials-slider" id="testimonialsSlider">
+                    <div class="testimonial-track">
+                        <!-- Testimonials will be dynamically loaded -->
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="faq-section" id="faq">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Frequently Asked Questions</h2>
+                    <p class="section-subtitle">
+                        Common questions about my WordPress development services
+                    </p>
+                </div>
+
+                <!-- Static FAQ Grid (5 Items with Translation Support) -->
+                <div class="faq-grid" id="faq-accordions">
+                    <!-- 1. Timelines -->
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span data-translate="faq_timeline_q">How long does a typical WordPress project take?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p data-translate="faq_timeline_a">Timelines vary by complexity. A standard brochure site
+                                normally takes 1-2 weeks, while a custom E-commerce platform may take 3-5 weeks. I
+                                provide a detailed schedule before we start.</p>
+                        </div>
+                    </div>
+
+                    <!-- 2. Pricing -->
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span data-translate="faq_pricing_q">What is your pricing structure?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p data-translate="faq_pricing_a">I offer project-based pricing to keep things transparent.
+                                No hidden hourly fees. Payments are typically split 50% upfront and 50% upon successful
+                                completion.</p>
+                        </div>
+                    </div>
+
+                    <!-- 3. SEO -->
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span data-translate="faq_seo_q">Do you provide SEO optimization?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p data-translate="faq_seo_a">Yes! All websites are built with SEO best practices: fast
+                                loading speeds, mobile responsiveness, semantic HTML, and I configure Yoast SEO or
+                                RankMath for you.</p>
+                        </div>
+                    </div>
+
+                    <!-- 4. Multilingual -->
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span data-translate="faq_multilingual_q">Can you create a multilingual website?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p data-translate="faq_multilingual_a">Yes, exactly like this portfolio! I specialize in
+                                building multilingual sites (English, French, Arabic) with full RTL (Right-to-Left)
+                                support for Arabic users.</p>
+                        </div>
+                    </div>
+
+                    <!-- 5. Maintenance -->
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span data-translate="faq_maintenance_q">Can you maintain my site after launch?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p data-translate="faq_maintenance_a">Absolutely. I offer monthly maintenance packages that
+                                include backups, security updates, plugin updates, and small content edits to keep your
+                                site running smoothly.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <style>
+                .faq-grid {
+                    max-width: 800px;
+                    margin: 0 auto;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 1rem;
+                }
+
+                .faq-item {
+                    background: var(--color-bg-card, #1e1e1e);
+                    border: 1px solid var(--color-border, #333);
+                    border-radius: 8px;
+                    overflow: hidden;
+                }
+
+                .faq-question {
+                    width: 100%;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    padding: 1.5rem;
+                    background: none;
+                    border: none;
+                    color: var(--color-text-primary, #fff);
+                    font-size: 1.1rem;
+                    font-weight: 600;
+                    cursor: pointer;
+                    text-align: left;
+                    transition: all 0.3s ease;
+                }
+
+                .faq-question:hover {
+                    color: var(--color-accent-primary, #00d4ff);
+                }
+
+                .faq-question.active {
+                    color: var(--color-accent-primary, #00d4ff);
+                    background: rgba(0, 212, 255, 0.05);
+                }
+
+                .faq-icon {
+                    font-size: 1.5rem;
+                    font-weight: 300;
+                    margin-left: 1rem;
+                }
+
+                .faq-answer {
+                    max-height: 0;
+                    overflow: hidden;
+                    transition: max-height 0.3s ease-out;
+                    background: var(--color-bg-tertiary, #151515);
+                }
+
+                .faq-answer p {
+                    padding: 1.5rem;
+                    margin: 0;
+                    color: var(--color-text-secondary, #ccc);
+                    line-height: 1.6;
+                }
+            </style>
+
+            <script>
+                document.addEventListener('DOMContentLoaded', () => {
+                    const questions = document.querySelectorAll('.faq-question');
+
+                    questions.forEach(question => {
+                        question.addEventListener('click', () => {
+                            // Toggle active class
+                            const isActive = question.classList.contains('active');
+                            const answer = question.nextElementSibling;
+
+                            // Close all others
+                            document.querySelectorAll('.faq-question').forEach(q => {
+                                q.classList.remove('active');
+                                q.querySelector('.faq-icon').textContent = '+';
+                                q.nextElementSibling.style.maxHeight = null;
+                            });
+
+                            // If it wasn't active before, open it
+                            if (!isActive) {
+                                question.classList.add('active');
+                                question.querySelector('.faq-icon').textContent = '-';
+                                answer.style.maxHeight = answer.scrollHeight + "px";
+                            }
+                        });
+                    });
+                });
+            </script>
+        </section>
+
+        <!-- Tech Stack Section -->
+        <section class="tech-stack-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title" data-translate="tech_title">Technologies I Use</h2>
+                    <p class="section-subtitle" data-translate="tech_subtitle">
+                        Modern tools and technologies for building exceptional websites
+                    </p>
+                </div>
+
+                <div class="tech-grid">
+                    <div class="tech-item">
+                        <div class="tech-icon">
+                            <img src="image/wordpress.png" alt="WordPress" width="135" height="135">
+                        </div>
+                        <span class="tech-name">WordPress</span>
+                    </div>
+                    <div class="tech-item">
+                        <div class="tech-icon">
+                            <img src="image/elementor.png" alt="Elementor" width="135" height="135">
+                        </div>
+                        <span class="tech-name">Elementor</span>
+                    </div>
+                    <div class="tech-item">
+                        <div class="tech-icon">
+                            <img src="image/php.png" alt="PHP" width="135" height="135">
+                        </div>
+                        <span class="tech-name">PHP</span>
+                    </div>
+                    <div class="tech-item">
+                        <div class="tech-icon">
+                            <img src="image/javascript.png" alt="JavaScript" width="135" height="135">
+                        </div>
+                        <span class="tech-name">JavaScript</span>
+                    </div>
+                    <div class="tech-item">
+                        <div class="tech-icon">
+                            <img src="image/woo commerce.png" alt="WooCommerce" width="135" height="135">
+                        </div>
+                        <span class="tech-name">WooCommerce</span>
+                    </div>
+                    <div class="tech-item">
+                        <div class="tech-icon">
+                            <img src="image/html.png" alt="HTML5" width="135" height="135">
+                        </div>
+                        <span class="tech-name">HTML5</span>
+                    </div>
+                    <div class="tech-item">
+                        <div class="tech-icon">
+                            <img src="image/css.png" alt="CSS3" width="135" height="135">
+                        </div>
+                        <span class="tech-name">CSS3</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Contact Section -->
+        <!-- REMOVED AS REQUESTED -->
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <span class="logo-text">RS</span>
+                        <span class="logo-dot">.</span>
+                    </div>
+                    <p class="footer-tagline" data-translate="footer_tagline">
+                        Building exceptional WordPress experiences
+                    </p>
+                </div>
+
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4 data-translate="footer_navigation">Navigation</h4>
+                        <ul>
+                            <li><a href="#home" data-translate="nav_home">Home</a></li>
+                            <li><a href="#services" data-translate="nav_services">Services</a></li>
+                            <li><a href="#projects" data-translate="nav_projects">Projects</a></li>
+                            <li><a href="#about" data-translate="nav_about">About</a></li>
+                            <li><a href="https://wa.me/213555346497" data-translate="nav_contact"
+                                    target="_blank">Contact</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-column">
+                        <h4 data-translate="footer_services">Services</h4>
+                        <ul>
+                            <li><a href="#services" data-translate="service_1_title">Custom WordPress Development</a>
+                            </li>
+                            <li><a href="#services" data-translate="service_2_title">Elementor Pro Design</a></li>
+                            <li><a href="#services" data-translate="service_3_title">WooCommerce Stores</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-column">
+                        <h4 data-translate="footer_connect">Connect</h4>
+                        <div class="social-links">
+                            <a href="https://www.facebook.com/mp4.sqll/" aria-label="Facebook" target="_blank">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                    <path
+                                        d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+                                </svg>
+                            </a>
+                            <a href="https://www.instagram.com/redonesef/" aria-label="Instagram" target="_blank">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                    <path
+                                        d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p class="copyright">
+                    &copy; <span id="currentYear">2024</span> Radouane Seffari. <span data-translate="footer_rights">All
+                        rights reserved.</span>
+                </p>
+                <div class="footer-language">
+                    <button class="lang-btn-footer active" data-lang="en">EN</button>
+                    <span class="lang-divider">|</span>
+                    <button class="lang-btn-footer" data-lang="fr">FR</button>
+                    <span class="lang-divider">|</span>
+                    <button class="lang-btn-footer" data-lang="ar">AR</button>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/213555346497" class="whatsapp-float" target="_blank" aria-label="Contact on WhatsApp">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+            <path
+                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+        </svg>
+    </a>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to Top">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="18 15 12 9 6 15"></polyline>
+        </svg>
+    </button>
+
+    <!-- Scripts -->
+    <script src="js/translations.js"></script>
+    <script src="js/language.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/modals.js"></script>
+    <script src="js/components.js"></script>
+    <script src="js/interactive.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
